@@ -1,0 +1,70 @@
+{
+  "bounds": [
+    -88.0197,
+    41.6,
+    -87.3386,
+    42.0941
+  ],
+  "center": [
+    -87.6297,
+    41.8793,
+    11
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "new-demo-permits",
+    "template_full": "",
+    "template_teaser": "<b>{{{address}}}</b><br>\n<b>Demolished</b>: {{{date}}}<br>\n<b>Cost</b>: ${{{cost}}}<br><br>\n{{{work}}}\n",
+    "fields": [
+      "address",
+      "date",
+      "cost",
+      "work",
+      "bldg_gid"
+    ]
+  },
+  "minzoom": 11,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        -87.8879977167856,
+        41.6450455793782,
+        -87.5300489858429,
+        42.0192912311507
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_demo_permits",
+        "key_field": "bldg_gid",
+        "geometry_field": "centroid",
+        "extent_cache": "auto",
+        "extent": "-87.8879977167856,41.6450455793782,-87.5300489858429,42.0192912311507",
+        "host": "localhost",
+        "port": "5432",
+        "dbname": "reinventchi",
+        "user": "jpv",
+        "id": "new-demo-permits",
+        "project": "new_demo_permits",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "new-demo-permits",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "new-demo-permits"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Building Demolitions",
+  "description": "Every building demolished in Chicago since 2006.",
+  "legend": "<div class='my-legend'>\n<div class='legend-title'>Building demolitions, since 2006</div>\n<div class='legend-source'>Source: <a href=\"https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu\">City of Chicago - Dept. of Buildings</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .legend-title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n  .wax-legend .legend-scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .legend-scale ul li {\n    display: block;\n    float: left;\n    width: 50px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .wax-legend ul.legend-labels li span {\n    display: block;\n    float: left;\n    height: 15px;\n    width: 50px;\n    }\n  .wax-legend .legend-source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-legend a {\n    color: #777;\n    }\n</style>",
+  "attribution": ""
+}

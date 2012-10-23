@@ -1,0 +1,72 @@
+{
+  "bounds": [
+    -88.0197,
+    41.6,
+    -87.3386,
+    42.0941
+  ],
+  "center": [
+    -87.6297,
+    41.8793,
+    11
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "building-areas",
+    "fields": [
+      "address",
+      "landuse",
+      "zoning",
+      "has_stories",
+      "stories",
+      "has_sqft",
+      "sqft",
+      "bldg_gid"
+    ],
+    "template_teaser": "<b>{{{address}}}</b><br>\n{{{landuse}}}<br>\n<b>Zoning</b>: {{{zoning}}}<br>\n{{#has_stories}}<b>Stories</b>: {{{stories}}}<br>{{/has_stories}}\n{{#has_sqft}}<b>Sq ft</b>: {{{sqft}}}<br>{{/has_sqft}}"
+  },
+  "minzoom": 11,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -87.9398144204312,
+        41.6445952533783,
+        -87.5242077860985,
+        42.0229999884811
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "building_areas",
+        "key_field": "bldg_gid",
+        "geometry_field": "the_geom",
+        "extent_cache": "auto",
+        "extent": "-87.9398144204312,41.6445952533783,-87.5242077860985,42.0229999884811",
+        "host": "localhost",
+        "port": "5432",
+        "dbname": "reinventchi",
+        "user": "jpv",
+        "id": "building-areas",
+        "project": "building_areas",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "building-areas",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "building-areas"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Building Areas",
+  "description": "Over 800,000 of Chicago's building footprints, colored by footprint area.",
+  "legend": "<div class='my-legend'>\n<div class='legend-title'>Building footprints, colored by their area</div>\n<div class='legend-scale'>\n  <ul class='legend-labels'>\n    <li><span style='background:#0ff;'></span>0 - 100 m²</li>\n    <li><span style='background:#7f00ff;'></span>1000 m²</li>\n    <li><span style='background:#F0F;'></span>10K m²</li>\n    <li><span style='background:#ff007f;'></span>100K m²</li>\n    <li><span style='background:#F00;'></span>100K<b>+</b> m²</li>\n  </ul>\n</div>\n<div class='legend-source'>Source: <a href=\"https://data.cityofchicago.org/Buildings/Building-Footprints/w2v3-isjw\">City of Chicago - Dept. of Buildings</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .legend-title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n  .wax-legend .legend-scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .legend-scale ul li {\n    display: block;\n    float: left;\n    width: 50px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .wax-legend ul.legend-labels li span {\n    display: block;\n    float: left;\n    height: 15px;\n    width: 50px;\n    }\n  .wax-legend .legend-source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-legend a {\n    color: #777;\n    }\n</style>",
+  "attribution": ""
+}

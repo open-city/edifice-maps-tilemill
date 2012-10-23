@@ -1,0 +1,72 @@
+{
+  "bounds": [
+    -88.0197,
+    41.6,
+    -87.3386,
+    42.0941
+  ],
+  "center": [
+    -87.664,
+    41.8803,
+    11
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "new-violations",
+    "template_teaser": "<b>{{{address}}}</b><br>\n<b>{{{count}}} violations</b> since 2006<br><br>\n\n<b>Most recent violation</b>: {{{v_desc}}}<br>\n<b>Type of inspection</b>: {{{insp_category}}}<br>\n<b>Result</b>: {{{insp_status}}}<br>\n",
+    "template_full": "<b>Inspector comments</b>: {{{v_insp_comments}}}<br>",
+    "fields": [
+      "v_insp_comments",
+      "address",
+      "count",
+      "v_desc",
+      "insp_category",
+      "insp_status",
+      "bldg_gid"
+    ]
+  },
+  "minzoom": 11,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        -87.8688711355112,
+        41.6452453847191,
+        -87.5247511691793,
+        42.0229999884811
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_violations",
+        "key_field": "bldg_gid",
+        "geometry_field": "centroid",
+        "extent_cache": "auto",
+        "extent": "-87.8688711355112,41.6452453847191,-87.5247511691793,42.0229999884811",
+        "host": "localhost",
+        "port": "5432",
+        "dbname": "reinventchi",
+        "user": "jpv",
+        "id": "new-violations",
+        "project": "new_const_permits",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "new-violations",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "new-violations"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Building Violations",
+  "description": "Every violation issued by the City of Chicago since 2006.",
+  "legend": "<div class='my-legend'>\n<div class='legend-title'>Buildings with code violations, since 2006</div>\n<div class='legend-scale'>\n  <ul class='legend-labels'>\n    <li>Type of building inspection the violation resulted from</li>\n    <li><span style='background:#07f;'></span>Complaint inspection</li>\n    <li><span style='background:#F00;'></span>Periodic inspection</li>\n    <li><span style='background:#ff0;'></span>Permit inspection</li>\n  </ul>\n</div>\n<div class='legend-source'>Source: <a href=\"https://data.cityofchicago.org/Buildings/Building-Violations/22u3-xenr\">City of Chicago - Dept. of Buildings</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .legend-title {\n    text-align: left;\n    margin-bottom: 5px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n  .wax-legend .legend-scale ul {\n    margin: 0;\n    margin-bottom: 5px;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .legend-scale ul li {\n    font-size: 80%;\n    list-style: none;\n    margin-left: 0;\n    line-height: 18px;\n    margin-bottom: 2px;\n    }\n  .wax-legend ul.legend-labels li span {\n    display: block;\n    float: left;\n    height: 16px;\n    width: 30px;\n    margin-right: 5px;\n    margin-left: 0;\n    border: 1px solid #999;\n    }\n  .wax-legend .legend-source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-legend a {\n    color: #777;\n    }\n</style>",
+  "attribution": ""
+}
