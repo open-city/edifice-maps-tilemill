@@ -1,1 +1,5 @@
 .DS_Store
+
+# Ignore map tiles
+*.mbtiles
+mapbox_to_s3/output/*
